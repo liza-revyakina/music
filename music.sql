@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS song (
     id SERIAL PRIMARY KEY,
     song_name VARCHAR(60) NOT NULL,
     song_year INTEGER CHECK (song_year > 1900 AND song_year < 2030),
+    duration TIME NOT NULL,
     album_id INTEGER NOT NULL REFERENCES album(id)
 );
 
